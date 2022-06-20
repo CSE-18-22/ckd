@@ -1,5 +1,5 @@
 <script>
-  import Card from "./Card.svelte";
+  import Card from "../UI/Card.svelte";
 </script>
 
 <div class="parent">
@@ -207,30 +207,36 @@
       <Card>
         <h2>Dataset</h2>
         <p>
-          The research was conducted using the CKD dataset [26]. There are 400
-          rows and 14 columns in this dataset. The output column “class” has a
-          value of either “1” or “0.” The value “0” indicates that the patient
-          is not a CKD patient, while the value “1” shows that the patient is a
-          CKD patient. Before preprocessing, Figure 2 displays the total number
-          of CKD and non-CKD entries in the output column. The overall number of
-          CKD data is 250, whereas the total number of non-CKD data is 150.
+          The research was conducted using the <a
+            href="https://www.kaggle.com/datasets/abhia1999/chronic-kidney-disease"
+            >CKD dataset</a
+          >. There are 400 rows and 14 columns in this dataset. The output
+          column “class” has a value of either “1” or “0.” The value “0”
+          indicates that the patient is not a CKD patient, while the value “1”
+          shows that the patient is a CKD patient. Before preprocessing, Figure
+          2 displays the total number of CKD and non-CKD entries in the output
+          column. The overall number of CKD data is 250, whereas the total
+          number of non-CKD data is 150.
         </p>
       </Card>
     </div>
     <div>
       <Card
         ><h2>Data preprocessing</h2>
-        <p>
-          The research was conducted using the CKD dataset [26]. There are 400
-          rows and 14 columns in this dataset. The output column “class” has a
-          value of either “1” or “0.” The value “0” indicates that the patient
-          is not a CKD patient, while the value “1” shows that the patient is a
-          CKD patient. Before preprocessing, Figure 2 displays the total number
-          of CKD and non-CKD entries in the output column. The overall number of
-          CKD data is 250, whereas the total number of non-CKD data is 150.
-        </p>
-        <img src="images/preprocess.png" alt="#" /></Card
-      >
+        <div style="display:flex;">
+          <p>
+            The research was conducted using the CKD dataset [26]. There are 400
+            rows and 14 columns in this dataset. The output column “class” has a
+            value of either “1” or “0.” The value “0” indicates that the patient
+            is not a CKD patient, while the value “1” shows that the patient is
+            a CKD patient. Before preprocessing, Figure 2 displays the total
+            number of CKD and non-CKD entries in the output column. The overall
+            number of CKD data is 250, whereas the total number of non-CKD data
+            is 150.
+          </p>
+          <img src="images/preprocess.png" alt="#" />
+        </div>
+      </Card>
     </div>
     <div>
       <Card
@@ -503,7 +509,7 @@
 
 <style>
   .parent {
-    width: 90vw;
+    width: 1800px;
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -518,5 +524,11 @@
     overflow-y: auto;
     overflow-x: hidden;
     width: 90vw;
+  }
+  div {
+    padding: 5px;
+  }
+  img {
+    padding-left: 5px;
   }
 </style>

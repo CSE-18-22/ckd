@@ -1,15 +1,39 @@
 <script>
-  import Input from "./Input.svelte";
-  let sg;
-  let htn;
-  let hemo;
-  let dm;
-  let al;
-  let appet;
-  let rc;
-  let pc;
-  let submit = () => {
-    alert("Functionality not implemented yet!");
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+  import Input from "../UI/Input.svelte";
+  import Modal from "../UI/Modal.svelte";
+  import Alert from "../UI/Alert.svelte";
+  let sg = 1;
+  let htn = 1;
+  let hemo = 1;
+  let dm = 1;
+  let al = 1;
+  let appet = 1;
+  let rc = 1;
+  let pc = 1;
+  // alert("Functionality not implemented yet!");
+  let result = null;
+  const submit = async () => {
+    let response = await fetch("http://localhost:5000/predict", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        sg: sg,
+        htn: htn,
+        hemo: hemo,
+        dm: dm,
+        al: al,
+        appet: appet,
+        rc: rc,
+        pc: pc,
+      }),
+    });
+    result = await response.json();
+    console.log(result);
   };
 </script>
 
@@ -70,6 +94,9 @@
   }}
 />
 <button class="btn" on:click={submit}>submit</button>
+{#if result}
+  <Alert title="Prediction" msg="Good news! You don't have CKD" />
+{/if}
 
 <style>
   .btn {

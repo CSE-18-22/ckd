@@ -1,5 +1,5 @@
 <script>
-  import Profile from "./Profile.svelte";
+  import Profile from "../UI/Profile.svelte";
   let profiles = [
     {
       name: "Vinod Reddy",
