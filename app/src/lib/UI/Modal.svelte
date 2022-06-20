@@ -97,15 +97,16 @@
     right: 0px;
     bottom: 0px;
     top: 0px;
-    background-color: rgb(224, 224, 224, 0.2);
-    backdrop-filter: blur(2px) opacity(20%);
+    background-color: rgba(246, 240, 240, 0.2);
+    opacity: 1;
+    /* backdrop-filter: blur(2px) opacity(20%); */
   }
 
   .modal {
-    background-color: var(--background);
+    background-color: white;
     z-index: 2;
     transform: scale(0.7);
-    color: var(--onbackground);
+    color: black;
     box-shadow: 0 0 5px #000000;
     border-radius: 0.4em;
   }
@@ -113,6 +114,7 @@
   .animation-back-drop-open {
     backdrop-filter: blur(1px) opacity(100%);
     transition: all 0.3s;
+    opacity: 0;
   }
 
   .animation-back-drop-close {

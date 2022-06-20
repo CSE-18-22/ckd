@@ -16,14 +16,6 @@ def Home():
 def predict():
     if request.method == 'POST':
         content=request.json
-        # sg = float(request.form['sg'])
-        # htn = float(request.form['htn'])
-        # hemo = float(request.form['hemo'])
-        # dm = float(request.form['dm'])
-        # al = float(request.form['al'])
-        # appet = float(request.form['appet'])
-        # rc = float(request.form['rc'])
-        # pc = float(request.form['pc'])
         sg=float(content["sg"])
         htn=float(content["htn"])
         hemo=float(content["hemo"])
@@ -35,10 +27,8 @@ def predict():
 
         values = np.array([[sg, htn, hemo, dm, al, appet, rc, pc]])
         prediction = model.predict(values)
-
-        # return render_template('result.html', prediction=prediction)
-        # return json.dumps(True)
-        return jsonify(result=True, id=200)
+        print(prediction)
+        return jsonify(result=str(prediction[0]), id=200)
 
 if __name__ == "__main__":
     app.run(debug=True)

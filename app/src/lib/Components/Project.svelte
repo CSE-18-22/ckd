@@ -1,8 +1,5 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
   import Input from "../UI/Input.svelte";
-  import Modal from "../UI/Modal.svelte";
   import Alert from "../UI/Alert.svelte";
   let sg = 1;
   let htn = 1;
@@ -12,7 +9,6 @@
   let appet = 1;
   let rc = 1;
   let pc = 1;
-  // alert("Functionality not implemented yet!");
   let result = null;
   const submit = async () => {
     let response = await fetch("http://localhost:5000/predict", {
@@ -37,6 +33,7 @@
   };
 </script>
 
+<div class="note">All Values are set to 1 by default!</div>
 <Input
   label="Specific Gravity"
   placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)"
@@ -94,8 +91,24 @@
   }}
 />
 <button class="btn" on:click={submit}>submit</button>
-{#if result}
-  <Alert title="Prediction" msg="Good news! You don't have CKD" />
+{#if result != null}
+  {#if result.result == "1"}
+    <Alert
+      title="Prediction"
+      msg={`Good news!\n You don't have CKD. Have fun!!!`}
+      on:ok={() => {
+        result = null;
+      }}
+    />
+  {:else}
+    <Alert
+      title="Prediction"
+      msg={`Sorry to say this,\n You might have to see a doctor.\n There's a chance for you to get CDK.\n Take care!!!`}
+      on:ok={() => {
+        result = null;
+      }}
+    />
+  {/if}
 {/if}
 
 <style>
@@ -108,5 +121,10 @@
     background-color: aqua;
     border-radius: 5px;
     border-width: 0px;
+  }
+  .note {
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.3;
   }
 </style>
