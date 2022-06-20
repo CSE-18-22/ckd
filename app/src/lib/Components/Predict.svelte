@@ -2,6 +2,7 @@
   import Input from "../UI/Input.svelte";
   import Alert from "../UI/Alert.svelte";
   import Paper from "../UI/Paper.svelte";
+  import Button from "../UI/Button.svelte";
 
   let sg = 1;
   let htn = 1;
@@ -93,7 +94,8 @@
       pc = value.detail;
     }}
   />
-  <button class="btn" on:click={submit}>submit</button>
+  <div class="btn"><Button label="Submit" on:click={submit} /></div>
+
   {#if result != null}
     {#if result.result == "1"}
       <Alert
@@ -120,11 +122,6 @@
     margin-top: 20px;
     position: relative;
     left: 40vw;
-    height: 50px;
-    width: 100px;
-    background-color: aqua;
-    border-radius: 5px;
-    border-width: 0px;
   }
   .note {
     font-size: 20px;
