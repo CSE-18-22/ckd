@@ -1,8 +1,8 @@
 <script>
-  import Tab from "./lib/Tab.svelte";
-  import Home from "./lib/Home.svelte";
-  import About from "./lib/About.svelte";
-  import Project from "./lib/Project.svelte";
+  import Tab from "./lib/UI/Tab.svelte";
+  import Home from "./lib/Components/Home.svelte";
+  import About from "./lib/Components/About.svelte";
+  import Project from "./lib/Components/Project.svelte";
 
   let items = [
     { label: "Home", value: 1, component: Home },
