@@ -47,6 +47,7 @@
     display: block;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    background-color: aqua;
   }
 
   span:hover {

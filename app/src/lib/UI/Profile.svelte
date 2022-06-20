@@ -1,19 +1,32 @@
 <script>
   import Card from "./Card.svelte";
+  import Paper from "./Paper.svelte";
+
   export let profile = {
     name: "name",
+    id: "github id",
+    link: "github link",
     img: "imgurl",
     title: "title",
     description: "description",
   };
 </script>
 
-<div>
+<div class="profile">
   <Card>
     <div class="card">
-      <div class="contianer"><img src={profile.img} alt="" class="img" /></div>
+      <div class="contianer">
+        <img src={profile.img} alt="" class="img" />
+      </div>
       <div class="details">
-        <div class="name">{profile.name}</div>
+        <div style="display:flex;">
+          <div class="name">
+            {profile.name}
+            <small style="opacity:0.5;"
+              ><a href={profile.link}>{profile.id}</a>
+            </small>
+          </div>
+        </div>
         <div class="title">{profile.title}</div>
         <div class="description">{profile.description}</div>
       </div>
@@ -22,6 +35,10 @@
 </div>
 
 <style>
+  .profile {
+    width: 45vw;
+    background-color: aliceblue;
+  }
   .card {
     display: flex;
   }

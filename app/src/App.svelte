@@ -2,12 +2,14 @@
   import Tab from "./lib/UI/Tab.svelte";
   import Home from "./lib/Components/Home.svelte";
   import About from "./lib/Components/About.svelte";
-  import Project from "./lib/Components/Project.svelte";
+  import Predict from "./lib/Components/Predict.svelte";
+  import Model from "./lib/Components/Model.svelte";
 
   let items = [
     { label: "Home", value: 1, component: Home },
-    { label: "Project", value: 2, component: Project },
-    { label: "About", value: 3, component: About },
+    { label: "Model", value: 2, component: Model },
+    { label: "Predict", value: 3, component: Predict },
+    { label: "About", value: 4, component: About },
   ];
 </script>
 

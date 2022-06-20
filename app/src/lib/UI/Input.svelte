@@ -39,6 +39,7 @@
   .input {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    width: 90vw;
   }
   .label {
     font-size: 40;

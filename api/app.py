@@ -3,14 +3,9 @@ import numpy as np
 import pickle
 from flask_cors import CORS
 
-
 app = Flask(__name__)
 CORS(app)
 model = pickle.load(open('Kidney.pkl', 'rb'))
-
-@app.route('/',methods=['GET'])
-def Home():
-    return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -27,9 +22,7 @@ def predict():
 
         values = np.array([[sg, htn, hemo, dm, al, appet, rc, pc]])
         prediction = model.predict(values)
-        print(prediction)
         return jsonify(result=str(prediction[0]), id=200)
 
 if __name__ == "__main__":
     app.run(debug=True)
-
