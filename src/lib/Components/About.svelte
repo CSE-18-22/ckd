@@ -13,7 +13,8 @@
       link: "https://github.com/vinod901",
       img: "profile/vinod.jpg",
       title: "Team Leader",
-      description: "",
+      description:
+        "B Tech graduate, looking for a software engineer role with strong command in Rust, C, Java, Typescript, javascript, Python etc.  Excellent communication skills and ability to understand client requirements.  Continuous learner of new technologies, strategies, and tools.",
     },
     {
       name: "Shakib Shaik",
@@ -21,23 +22,26 @@
       link: "https://github.com/Shakib25",
       img: "profile/shakib.jpeg",
       title: "UI Developer",
-      description: "Nothing to say",
+      description:
+        "Enthusiastic engineering graduate with basic knowledge in coding and design. Proficient in C++, HTML 5, JavaScript, and Python. Ability to learn new softwares and technologies quickly. Capability to work in teams by providing valuable support.",
     },
     {
       name: "Fazulul Rehman",
       id: "",
       link: "",
       img: "profile/fazulul.jpeg",
-      title: "UI Developer",
-      description: "Nothing to say",
+      title: "Python Developer",
+      description:
+        " A result-oriented and self-motivated B.Tech graduate, looking for a challenging career where I can implement my coding knowledge so that further enhance my skills. Strong knowledge of HTML, CSS, Javascript, Typescript, Svelte.",
     },
     {
       name: "Saleem",
       id: "",
       link: "",
       img: "profile/saleem.jpeg",
-      title: "UI Developer",
-      description: "Nothing to say",
+      title: "Backend Developer",
+      description:
+        "An aspiring software engineer with knowledge in software engineering practices such as coding, testing, code reviews, code comments, etc.  Strong ability to communicate with clients and ability to express ideas clearly and concisely.",
     },
   ];
   let skills = [
