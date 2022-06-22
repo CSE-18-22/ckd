@@ -8,23 +8,15 @@
     url: "url",
     description: "description",
   };
-  let cardopen = false;
 </script>
 
 <div style="padding:2px;">
   <Card>
-    <div
-      class="container"
-      on:click={() => {
-        cardopen = !cardopen;
-      }}
-    >
+    <div class="container">
       <div class="txt">
         <h1><a href={skill.url}>{skill.name}</a></h1>
-        {#if cardopen}
-          <h3 style="padding-left:15px;">{skill.role}</h3>
-          <p style="pading-left:20px;">{skill.description}</p>
-        {/if}
+        <h3 style="padding-left:15px;">{skill.role}</h3>
+        <p style="pading-left:20px;">{skill.description}</p>
       </div>
       <img src={skill.img} alt="#" />
     </div>
