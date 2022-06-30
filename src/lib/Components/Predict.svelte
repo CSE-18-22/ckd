@@ -14,7 +14,9 @@
   let pc = 1;
   let result = null;
   const submit = async () => {
-    pop = true;
+    setTimeout(() => {
+      pop = true;
+    }, 1000);
     let response = await fetch("https://ckd-flask-app.herokuapp.com/predict", {
       method: "POST",
       headers: {
@@ -120,7 +122,7 @@
       title="Error"
       msg={`Sorry!\n Our API is encountering some error. Try later!!!`}
       on:ok={() => {
-        result = null;
+        pop = false;
       }}
     />
   {/if}
