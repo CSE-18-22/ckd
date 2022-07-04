@@ -3,7 +3,7 @@
   import Alert from "../UI/Alert.svelte";
   import Paper from "../UI/Paper.svelte";
   import Button from "../UI/Button.svelte";
-  let pop = false;
+
   let sg = 1;
   let htn = 1;
   let hemo = 1;
@@ -14,9 +14,6 @@
   let pc = 1;
   let result = null;
   const submit = async () => {
-    setTimeout(() => {
-      pop = true;
-    }, 1000);
     let response = await fetch("https://ckd-flask-app.herokuapp.com/predict", {
       method: "POST",
       headers: {
@@ -116,15 +113,6 @@
         }}
       />
     {/if}
-  {/if}
-  {#if pop}
-    <Alert
-      title="Error"
-      msg={`Sorry!\n Our API is encountering some error. Try later!!!`}
-      on:ok={() => {
-        pop = false;
-      }}
-    />
   {/if}
 </Paper>
 
