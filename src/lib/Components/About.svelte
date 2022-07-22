@@ -26,6 +26,15 @@
         "Enthusiastic engineering graduate with basic knowledge in coding and design. Proficient in C++, HTML 5, JavaScript, and Python. Ability to learn new softwares and technologies quickly. Capability to work in teams by providing valuable support.",
     },
     {
+      name: "Pavan",
+      id: "pavan1130",
+      link: "https://github.com/pavan1130",
+      img: "profile/pavan.jpeg",
+      title: "Java Developer",
+      description:
+        "An aspiring software engineer with knowledge in software engineering practices such as coding, testing, code reviews, code comments, etc.  Strong ability to communicate with clients and ability to express ideas clearly and concisely.",
+    },
+    {
       name: "Fazulul Rehman",
       id: "",
       link: "",
@@ -33,15 +42,6 @@
       title: "Python Developer",
       description:
         " A result-oriented and self-motivated B.Tech graduate, looking for a challenging career where I can implement my coding knowledge so that further enhance my skills. Strong knowledge of HTML, CSS, Javascript, Typescript, Svelte.",
-    },
-    {
-      name: "Saleem",
-      id: "",
-      link: "",
-      img: "profile/saleem.jpeg",
-      title: "Backend Developer",
-      description:
-        "An aspiring software engineer with knowledge in software engineering practices such as coding, testing, code reviews, code comments, etc.  Strong ability to communicate with clients and ability to express ideas clearly and concisely.",
     },
   ];
   let skills = [
